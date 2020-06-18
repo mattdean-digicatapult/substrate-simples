@@ -5,13 +5,6 @@ package = 'pallet-aura'
 tag = 'v2.0.0-rc3'
 version = '2.0.0-rc3'
 
-[dependencies.balances]
-default-features = false
-git = 'https://github.com/paritytech/substrate.git'
-package = 'pallet-balances'
-tag = 'v2.0.0-rc3'
-version = '2.0.0-rc3'
-
 [dependencies.codec]
 default-features = false
 features = ['derive']
@@ -34,13 +27,6 @@ version = '2.0.0-rc3'
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
 package = 'pallet-grandpa'
-tag = 'v2.0.0-rc3'
-version = '2.0.0-rc3'
-
-[dependencies.randomness-collective-flip]
-default-features = false
-git = 'https://github.com/paritytech/substrate.git'
-package = 'pallet-randomness-collective-flip'
 tag = 'v2.0.0-rc3'
 version = '2.0.0-rc3'
 
@@ -135,12 +121,6 @@ package = 'frame-system'
 tag = 'v2.0.0-rc3'
 version = '2.0.0-rc3'
 
-[dependencies.template]
-default-features = false
-package = 'pallet-template'
-path = '../pallets/template'
-version = '2.0.0-rc3'
-
 [dependencies.timestamp]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -148,12 +128,6 @@ package = 'pallet-timestamp'
 tag = 'v2.0.0-rc3'
 version = '2.0.0-rc3'
 
-[dependencies.transaction-payment]
-default-features = false
-git = 'https://github.com/paritytech/substrate.git'
-package = 'pallet-transaction-payment'
-tag = 'v2.0.0-rc3'
-version = '2.0.0-rc3'
 [build-dependencies.wasm-builder-runner]
 git = 'https://github.com/paritytech/substrate.git'
 package = 'substrate-wasm-builder-runner'
@@ -175,12 +149,10 @@ targets = ['x86_64-unknown-linux-gnu']
 default = ['std']
 std = [
     'aura/std',
-    'balances/std',
     'codec/std',
     'frame-executive/std',
     'frame-support/std',
     'grandpa/std',
-    'randomness-collective-flip/std',
     'serde',
     'sp-api/std',
     'sp-block-builder/std',
@@ -196,7 +168,5 @@ std = [
     'sp-version/std',
     'sudo/std',
     'system/std',
-    'timestamp/std',
-    'transaction-payment/std',
-    'template/std',
+    'timestamp/std'
 ]
